@@ -4,7 +4,7 @@ SUM=$(($NUM1 + $NUM2))
 echo "Sum is: $SUM"
 
 #Array
-FRUITS=("Mango" "Apple""Bananana")
+FRUITS=("Mango" "Apple" "Bananana")
 
 echo "Fruits are: ${FRUITS[@]}"
 echo "First Fruit is: ${FRUITS[0]}"
