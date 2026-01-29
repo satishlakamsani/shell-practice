@@ -21,7 +21,7 @@ VALIDATE(){
       echo "$2 ... FAILURE"  |tee -a $LOGS_FILE
       exit 1
     else 
-    echo -e " $G $2  successfully ... SUCCESS" |tee -a $LOGS_FILE
+    echo -e " $G $2  successfully ... SUCCESS" $N|tee -a $LOGS_FILE
     fi
           }
     for package in $@ # sudo sh-loops.sh nginx mysql nodejs
