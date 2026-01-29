@@ -2,7 +2,7 @@
 USERID=$(id -u)
 echo  $USERID
 LOGS_FOLDER="/var/log/shell-script"
-LOGS_FILE="/vat/log/shell-script/$0.log"
+LOGS_FILE="/var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
    echo "please run this script as root user or using sudo" | tee -a $LOGS_FILE
