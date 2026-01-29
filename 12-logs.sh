@@ -7,6 +7,7 @@ if [ $USERID -ne 0 ]; then
    echo "please run this script as root user or using sudo" | tee -a $LOGS_FILE
    exit 1
 fi
+mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then 
