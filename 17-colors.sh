@@ -11,7 +11,7 @@ B="\e[34m"
 N="\e[0m"
 
 if [ $USERID -ne 0 ]; then
-   echo "$Y please run this script as root user or using sudo $N " | tee -a $LOGS_FILE
+   echo -e"$Y please run this script as root user or using sudo $N" | tee -a $LOGS_FILE
    exit 1
 fi
 mkdir -p $LOGS_FOLDER
@@ -32,6 +32,6 @@ VALIDATE(){
     dnf install $package -y &>> $LOGS_FILE
     VALIDATE $? "Installing $package"
     else 
-    echo "$package is already installed $Y skipping"
+    echo -e "$package is already installed $Y skipping"
     fi
     done
