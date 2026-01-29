@@ -14,7 +14,7 @@ VALIDATE(){
       echo "Nginx installation FAILURE" |tee -a $LOGS_FILE
       exit 1
     else 
-       echo "$2 successfully ... SUCCESS"
+       echo "$2 successfully ... SUCCESS"|tee -a $LOGS_FILE
     fi
     
 }
