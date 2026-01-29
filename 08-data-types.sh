@@ -12,7 +12,7 @@ echo "Second Fruit is: ${FRUITS[1]}"
 echo "Third Fruit is: ${FRUITS[2]}"
 
 NO1=29
-NO2=29
+NO2=A
 MUL=$(($NO1 * $NO2))
 echo "Mul is:$MUL"
 
