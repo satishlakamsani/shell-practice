@@ -14,7 +14,7 @@ else
    echo "$NUMBER is equal to 20"
 fi 
 
-if [ COUNT -gt 25]; then
+if [ $COUNT -gt 25]; then
    echo "$COUNT is greater than 25"
 elif [ $COUNT -eq 25]; then
    echo "$COUNT is equal to 25."
