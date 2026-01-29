@@ -13,6 +13,6 @@ echo "Third Fruit is: ${FRUITS[2]}"
 
 NO1=29
 NO2=A
-MUL=$(($NO1 * $NO2))
+MUL=$(($NO1 + $NO2))
 echo "Mul is:$MUL"
 
