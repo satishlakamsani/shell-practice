@@ -16,7 +16,7 @@ fi
 
 if [ COUNT -gt 25]; then
    echo "$COUNT is greater than 25"
-elif [ $COUNT -eq 25]: then
+elif [ $COUNT -eq 25]; then
    echo "$COUNT is equal to 25."
 else
    echo "$COUNT is less than 25"
