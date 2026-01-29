@@ -16,3 +16,7 @@ NO2=A
 MUL=$(($NO1 + $NO2))
 echo "Mul is:$MUL"
 
+COLORS=("RED" "GREEN" "BLUE")
+echo "Colors are: ${COLORS[@]}"
+echo "First Color is: ${COLORS[0]}"
+echo "Second Color is: ${COLORS[1..2]}"
