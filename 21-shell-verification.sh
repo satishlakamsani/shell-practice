@@ -15,5 +15,7 @@ done
 VALIDATE(){
     if [ $USERID -gt 0 ]; then
     echo "$USERID is greater than zero"
+    fi
 }
+
 VALIDATE 
