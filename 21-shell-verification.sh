@@ -12,3 +12,8 @@ for instance in $@
 do
     echo "::$instance"
 done
+VALIDATE(){
+    if [ $USERID -gt 0 ]; then
+    echo "$USERID is greater than zero"
+}
+VALIDATE 
