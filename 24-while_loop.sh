@@ -7,7 +7,7 @@ do
   ((count++))
 done
 
-while IFS=read -r line;do
+while IFS= read -r line;do
 #Process each line
 echo "$line"
-done <22-script-1.sh #input which file has to be read
+done < 22-script-1.sh #input which file has to be read
