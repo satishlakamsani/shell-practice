@@ -1,6 +1,6 @@
 #!/bin/bash
 count=1
-while [ $count -lt 6 ]; then
+while [ $count -lt 6 ] 
 do
  echo "count is:$count"
  sleep 1
