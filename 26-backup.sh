@@ -37,3 +37,4 @@ fi
 
 if [ !-d $DEST_DIR ]; then
 log "$R Destination Directory: $DEST_DIR does not exist $N"
+fi
