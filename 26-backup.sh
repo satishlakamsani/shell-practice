@@ -23,7 +23,7 @@ fi
 mkdir -p $LOGS_FOLDER
 
 USAGE(){
-    echo -e "$R USAGE:: sudo backup <SOURCE_DIR> <DEST_DIR> <DAYS> [default 14 days] $N"
+    log "$R USAGE:: sudo backup <SOURCE_DIR> <DEST_DIR> <DAYS> [default 14 days] $N"
     exit 1
 }
 if [ $# -lt 2 ]; then
@@ -46,4 +46,30 @@ log "Backup started"
 log "Source Directory: $SOURCE_DIR"
 log "Destination Directory: $DEST_DIR"
 log "Days: $DAYS"
+
+if [ -z "${FILES}" ]; then
+  log "No files to archieve ...$Y  SKIPPING $N"
+
+else 
+  #app-logs-$timestamp.zip
+  TIMESTAMP=$(date +%F-%H-%M-%S)
+  ZIP_FILE_NAME="DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
+  log "Archieve name:$ZIP_FILE_NAME"
+  tar -zcvf $ZIP_FILE_NAME $(find $SOURCE_DIR -name "*.log" -type f)-mtime +$DAYS
+
+#Check archieve is success or not
+if [ -f $ZIP_FILE_NAME ]; then
+    log "Archieval is ....$G SUCCESS $N"
+    while IFS=read -r filepath; 
+    do
+    #While each line process
+    log "Deleting file:$filepath"
+    rm -f $filepath
+    log "Deleted file $filepath"
+    done <<< $FILES
+else
+   log "Archieval is ...$R FAILURE $N"
+   exit 1
+ fi
+fi
 
