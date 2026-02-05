@@ -25,4 +25,4 @@ do
 done <<< $DISK_USAGE
 
 echo -e "$MESSAGE"
-sh 29-mail.sh "lakamsanisatish295.com" "High Disk Usage Alert on $IP_ADDRESS" "$MESSAGE" "HIGH_DISK_USAGE" "$IP_ADDRESS" "DevOps Team"
+sh 29-mail.sh "lakamsanisatish295@gmail.com" "High Disk Usage Alert on $IP_ADDRESS" "$MESSAGE" "HIGH_DISK_USAGE" "$IP_ADDRESS" "DevOps Team"
